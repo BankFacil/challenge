@@ -1,0 +1,10 @@
+<h1>{{name}}</h1>
+
+<div class="messages">
+    <form class="message-input">
+        {{input value=mensagem}}
+        <button {{action "enviar"}}>Enviar</button>
+    </form>
+
+    {{message-list mensagens=chat.mensagens}}
+</div>
