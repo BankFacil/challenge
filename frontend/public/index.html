@@ -35,8 +35,8 @@
                 <div class="field">
                   <label for="garantia">Garantia</label>
                   <select name="garantia" id="garantia" required>
-                    <option value="veiculo">Veículo</option>
-                    <option value="imovel">Imóvel</option>
+                    <option value="vehicle">Veículo</option>
+                    <option value="realty">Imóvel</option>
                   </select>
                 </div>
               </div>
@@ -44,14 +44,14 @@
                 <div class="field-group">
                   <div class="field">
                     <label for="valor-garantia">Valor da Garantia</label>
-                    <input type="text" required name="valor-garantia" id="valor-garantia" value="14400" />
+                    <input type="text" required name="valor-garantia" id="valor-garantia" value="R$ 14.400,00" />
                   </div>
                   <div class="field">
                     <div class="range">
-                      <input type="range" name="valor-garantia-range" id="valor-garantia-range" min="0" max="100" value="20" step="10">
+                      <input type="range" name="valor-garantia-range" id="valor-garantia-range" min="0" max="100" value="20" step="100" />
                       <div class="range__values">
-                        <span>12.000</span>
-                        <span>24.000</span>
+                        <span>R$ 12.000,00</span>
+                        <span>R$ 24.000,00</span>
                       </div>
                     </div>
                   </div>
@@ -61,14 +61,14 @@
                 <div class="field-group">
                   <div class="field">
                     <label for="valor-emprestimo">Valor do Empréstimo</label>
-                    <input type="text" required name="valor-emprestimo" id="valor-emprestimo" value="57000">
+                    <input type="text" required name="valor-emprestimo" id="valor-emprestimo" value="R$ 57.000,00" />
                   </div>
                   <div class="field">
                     <div class="range">
-                      <input type="range" name="valor-emprestimo-range" id="valor-emprestimo-range" min="0" max="100" value="90" step="10">
+                      <input type="range" name="valor-emprestimo-range" id="valor-emprestimo-range" min="0" max="100" value="90" step="100" />
                       <div class="range__values">
-                        <span>30.000</span>
-                        <span>60.000</span>
+                        <span>R$ 30.000,00</span>
+                        <span>R$ 60.000,00</span>
                       </div>
                     </div>
                   </div>
@@ -97,8 +97,9 @@
             </div>
           </form>
         </section>
-        <footer class="footer">*Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quas non harum dolor eligendi id, ab corrupti blanditiis suscipit ex odit error alias minus. Enim dolores eum officiis quae rem!*</footer>
+        <footer class="footer">*O valor do empréstimo pode ser de até 80% do valor da garantia declarada.*</footer>
       </main>
     </div>
+    <script src="/bundle.js"></script>
   </body>
 </html>

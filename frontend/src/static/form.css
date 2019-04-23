@@ -1,0 +1,103 @@
+@import "./colors.css";
+
+.form {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.field-group {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.field-group .field:first-child {
+  margin-right: 30px;
+}
+
+.field label {
+  color: var(--dove-gray);
+  font-weight: bold;
+  font-size: .8rem;
+  margin-bottom: 5px;
+}
+
+.field select {
+  border:none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -ms-appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 14px) calc(1em + 2px),
+    calc(100% - 9px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.6em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+.field select, .field input[type="text"] {
+  color: var(--emperor);
+  border: 1px solid var(--nobel);
+  background-color: var(--alabaster);
+  border-radius: 4px;
+  padding: 10px 5px;
+  width: 150px;
+}
+
+.form__fields {
+  max-width: 400px;
+  min-width: 400px;
+}
+
+.range {
+  transform: translateY(11px);
+}
+
+.range__values {
+  display: flex;
+  justify-content: space-between;
+}
+
+.range__values span {
+  font-size: .6rem;
+  font-weight: 100;
+}
+
+.field input[type="range"] {
+  transform: translateY(5px);
+}
+
+@media screen and (max-width: 630px) {
+  .form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form > div {
+    width: 100%;
+  }
+
+  .form .form__fields {
+    min-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .form .form__result {
+    width: 200px;
+    height: 250px;
+  }
+}

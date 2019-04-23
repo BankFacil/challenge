@@ -1,0 +1,59 @@
+@import "./colors.css";
+
+.form__result {
+  background-color: var(--white);
+  border-radius: 4px;
+  box-shadow: 0px -5px 2px -1px var(--silver);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 35%;
+}
+
+.form__result h4 {
+  color: var(--boulder);
+  font-size: .7rem;
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+.form__result p {
+  font-size: .7rem;
+  font-weight: 100;
+  text-align: center;
+}
+
+.quota__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quota__container h4 {
+  font-weight: 200;
+  font-size: 18px;
+}
+
+.quota strong {
+  font-size: 21px;
+  color: var(--dove-gray);
+}
+
+.quota span {
+  font-size: 28px;
+  color: var(--mountain-meadow);
+  font-weight: bold;
+}
+
+.button {
+  background-color: var(--green-yellow);
+  border: none;
+  padding: 10px 0;
+  width: 100%;
+  color: var(--tom-thumb);
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}

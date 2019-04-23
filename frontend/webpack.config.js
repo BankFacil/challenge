@@ -13,6 +13,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Creditas Challenge',
       hash: true,
+      favicon: 'public/favicon.ico',
       myPageHeader: 'Creditas Challenge',
       template: 'public/index.html',
       filename: 'index.html',

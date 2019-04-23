@@ -21,23 +21,19 @@
   Jest: "global" coverage threshold for lines (80%) not met: 14.29%
   Jest: "global" coverage threshold for functions (80%) not met: 9.52%
 --> */
-
-import CreditasChallenge, {
-  checkFormValidity,
-  getFormValues,
-  toStringFormValues,
+import {
   Send,
-  Submit
+  Submit,
+  updateCard,
+  changeOptions
 } from '../src/index'
+import { defaultPage } from '../src/lib/testConstants'
+import {
+  getFormValues
+} from '../src/lib/eventsHelper'
 
 function initializeAppMock () {
-  document.body.innerHTML = `
-    <form class="form" data-testid="form">
-      <label for="valor-garantia">Valor da Garantia</label>
-      <input id="valor-garantia" required />
-      <button type="button"></button>
-    </form>
-  `
+  document.body.innerHTML = defaultPage
 }
 
 function clean () {
@@ -45,6 +41,14 @@ function clean () {
 }
 
 describe('Creditas Challenge', () => {
+  const confirm = `Confirmação
+Campo: parcelas, Valor: 24
+Campo: garantia, Valor: vehicle
+Campo: valor-garantia, Valor: R$ 123.455,00
+Campo: valor-garantia-range, Valor: 123455
+Campo: valor-emprestimo, Valor: R$ 90.455,00
+Campo: valor-emprestimo-range, Valor: 90455
+Total R$100,513.60`
   beforeEach(() => {
     initializeAppMock()
   })
@@ -53,17 +57,50 @@ describe('Creditas Challenge', () => {
     clean()
   })
 
-  describe('Method: checkFormValidity', () => {
-    it('should return true when form has valid', () => {
+  describe('Method: getFormValues', () => {
+    it('should get all the form values', () => {
       const form = document.querySelector('.form')
-      const input = document.querySelector('input')
-      input.value = 10
-      expect(checkFormValidity(form)).toBeTruthy()
+      expect(getFormValues(form)).toEqual([
+        { 'field': 'parcelas', 'value': '24' },
+        { 'field': 'garantia', 'value': 'vehicle' },
+        { 'field': 'valor-garantia', 'value': 'R$ 123.455,00' },
+        { 'field': 'valor-garantia-range', 'value': '123455' },
+        { 'field': 'valor-emprestimo', 'value': 'R$ 90.455,00' },
+        { 'field': 'valor-emprestimo-range', 'value': '90455' }
+      ])
     })
+  })
 
-    it('should return false when form has not valid', () => {
+  describe('Method: updateCard', () => {
+    it('should change values based on default inputs', () => {
+      const total = document.querySelector('.amount_container p')
+      const quota = document.querySelector('.quota span')
+      const tax = document.querySelector('.tax__container p')
+      updateCard()
+      expect(quota.innerHTML).toBe('4188,06')
+      expect(tax.innerHTML).toBe('1,111 %')
+      expect(total.innerHTML).toBe('R$100,513.60')
+    })
+  })
+
+  describe('Method: changeOptions', () => {
+    it('should change values based on default inputs', () => {
+      const loanInput = document.getElementById('valor-emprestimo')
+      const warrantyInput = document.getElementById('valor-garantia')
+      changeOptions(
+        document.getElementById('parcelas'),
+        document.getElementById('garantia')
+      )
+      expect(loanInput.value).toBe('R$50,000.00')
+      expect(warrantyInput.value).toBe('R$5,625,000.00')
+    })
+  })
+
+  describe('Method: Send', () => {
+    it('should return the result', () => {
       const form = document.querySelector('.form')
-      expect(checkFormValidity(form)).toBeFalsy()
+      Send(getFormValues(form))
+        .then((result) => expect(result).toBe(confirm))
     })
   })
 
