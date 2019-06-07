@@ -1,0 +1,6 @@
+default: --no-source --color --format pretty
+report_html: "-f html -o log/report/"
+chrome: BROWSER=chrome
+firefox: BROWSER=firefox
+phantomjs: BROWSER=poltergeist
+headless: BROWSER=headless

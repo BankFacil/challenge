@@ -1,0 +1,5 @@
+#endpoint de acessos aos ambinetes
+homo:
+ base_url: "https://the-internet.herokuapp.com"
+prod:
+ base_url: ""

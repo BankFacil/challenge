@@ -1,0 +1,2 @@
+default: --no-source --color -f pretty -x
+report_html: -f html -o relatorios/cucumber-html-report.html
