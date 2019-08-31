@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RUBY_MODULE" version="4">
+  <component name="ModuleRunConfigurationManager">
+    <shared />
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Test" isTestSource="true" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.15.4, ruby-2.4.1-p111) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="power_assert (v0.4.1, ruby-2.4.1-p111) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="test-unit (v3.2.5, ruby-2.4.1-p111) [gem]" level="application" />
+  </component>
+</module>

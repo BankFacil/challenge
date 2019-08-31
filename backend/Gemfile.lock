@@ -1,0 +1,14 @@
+GEM
+  specs:
+    power_assert (0.4.1)
+    test-unit (3.2.5)
+      power_assert
+
+PLATFORMS
+  x64-mingw32
+
+DEPENDENCIES
+  test-unit
+
+BUNDLED WITH
+   1.15.4

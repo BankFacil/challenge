@@ -1,0 +1,16 @@
+ - entendendo_test - testes que utilizei para entender o código inicial
+ - principal_test - testes das implementações que fiz
+
+Versões
+ - Editado no RubyMine 2017.2.2
+ - test-unit v3.2.5
+ - ruby 2.4.1-p111
+
+Processo de instalação
+Instalação do test/unit
+gem install test-unit
+
+depois rodei
+gem install test-unit-full
+
+Só funcionou depois que adicione um Gemfile, não encontrei outra forma de carregar as gems no RM.
