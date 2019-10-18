@@ -1,0 +1,44 @@
+Desafio 1: 
+=> Cenários da feature descritos com Gherkin em inglês
+=> Os steps que possuem valores entre aspas são reutilizáveis, para os métodos
+steps definitions esses valores são recebidos como argumentos para o teste
+=> Foi usado Background na feature para evitar repetição de steps
+
+Desafio 2.1:
+=> Cenários da feature descritos com Gherkin em inglês
+=> Os elementos da tela e as ações nos elementos estão no aquivo *_screen.rb (Siteprism + Pageobjects)
+=> arquivos .rb de teste
+    > Um com os steps em comum no cenário de teste
+    > Os outros dois com os steps definitions implementados
+=> o primeiro cenário é para validar o comportamento do sistema ao excluir o checkbox e validar sua exclusão
+=> o segundo cenário tem por objetivo excluir e em seguida adicionar o checkbox, validar que ele existe no DOM,
+checá-lo e validar que foi checado e depois retirar o check e validar que foi devidamente retirado
+
+Desafio 2.2:
+=> Cenário da feature descritos com Gherkin em inglês
+=> Os elementos da tela e as ações nos elementos estão no aquivo *_screen.rb (Siteprism + Pageobjects)
+=> arquivos .rb de teste
+    > Um com os steps definitions implementados
+=> O cenário valida elementos da tela inicial do site, clica no link, faz a mudança para a nova aba, valida o texto
+no body da página e se a url atual é a esperada quando aberta a aba
+
+Desafio 2.3:
+=> Cenário da feature descritos com Gherkin em inglês
+=> arquivos .rb de teste
+    > um arquivo com os métodos da GEM HTTParty definidos para consumir uma API (GET, POST, PUT e DELETE)
+=> No cenário a URL da API é definida, em seguida todos os atributos pertinentes são estruturados em hashes
+e depois que a chamada é realizada são validados os atributos da reponse vs os atributos enviados e por fim
+se o Status Code da chamada é igual ao esperado
+
+Arquivos de suport (pasta support):
+=> Arquivo env.rb
+    > Possui as instâncias das gems que são necessárias para o desenvolvimento
+    > Possui a instância do módulo que define de maneira global as classes com 
+    os elementos mapeados e métodos de ação (.click, por exemplo)
+    > Caminho de acesso ao chromedriver para testes serem executados no Google chromewebdriver
+    > A definição do Selenium como WebDriver padrão
+    > Configuração dos "desired capabilites", nesse caso, para que o teste seja 
+    executado no navegador com a janela maximizada
+=> Arquivo spec_helper.rb
+    > Tem a instância de todos os arquivos dentros das pastas screen
+    > Possui um módulo com métodos das instâncias das classes dentro dos arquivos mencionados acima
