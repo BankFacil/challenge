@@ -1,0 +1,11 @@
+source "http://rubygems.org"
+
+gem 'cucumber'
+gem "rspec"
+gem "rake"
+gem 'page-object'
+gem "site_prism"
+gem 'capybara'
+gem 'selenium-webdriver'
+gem 'watir-webdriver'
+gem "httparty"
