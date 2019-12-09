@@ -1,0 +1,4 @@
+---
+default: -p html -p dot 
+dot: --format progress
+html: --format html --out=report/report.html

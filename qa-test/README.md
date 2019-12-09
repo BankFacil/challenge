@@ -61,8 +61,13 @@ Crie um teste que cria um post através da API. Valide que o post foi criado atr
 
 # Apresentação
 
-* **Código**
-* **Explicação da solução de automação dos testes (em arquivo separado em Markdown/Plain Text)**
+O objetivo deste teste é validar se as funcionalidades básicas das features estão de acordo com as especificações técnicas e funcionais. Para isso, foram desenvolvidos casos de teste para validar e verificar as funções de: adicionar e remover um checkbox, validar uma nova aba aberta e uma solicitação POST.
+
+Foi criado também uma feature com especificações sobre o login do site da Creditas.
+
+Para executar os teste, basta ir no seu terminal, acessar a pasta qa-test e executar o comando 'bundle exec cucumber'.
+
+Após a execução, vá na pasta report e abra o arquivo report.html para ter acesso detalhado do resultado do teste.
 
 # Avaliação
 
