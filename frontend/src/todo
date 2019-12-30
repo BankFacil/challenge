@@ -1,0 +1,4 @@
+Faltou validar as informações antes de calcular.
+Não usei redux as informações não eram compartilhadas com outras telas.
+Se fosse necessário fazer o fluxo de solicitar o emprestimo, iria implementar o fluxo de redux.
+Caso achem legal eu fazer, podem me solicitar que eu implemento.
