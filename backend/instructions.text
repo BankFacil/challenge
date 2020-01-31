@@ -1,0 +1,56 @@
+Instrucoes
+------------
+
+A implementacao do desafio encontra-se dentro da pasta features
+
+
+Solucao
+------------
+
+Para a solucao foi utilizado o patern Strategy. 
+Que visa na separacao do Regra de negocio  por semantica, que e muito utilizado em maquinas de estados que 
+pussuem implementacoes de Regra de Negocio especificas.
+
+O Desafio permitiria a inclusao de tentativa e excecao (try/except) no caso da ativacao da conta, mas como nao foi
+solicitado procurei nao fugir muito das premissas estabelecidas.
+
+Outro padrao que poderia ser utilizado seria o Retry Pattern, na necessidade de reenvio de notificacoes ao usuario.
+
+
+Codigo
+------------
+
+A ideia do codigo e ser a mais simples possivel, no qual qualquer um tenha a capadidade de entender.
+Por isso foi utilizado if encadeados ao inves de lambda para instaciar as classes correspondentes.
+
+A utlizacao de estaticos foi para a facil conferecia de dados, sem a necessidade de utilizar Mockups.
+
+Nao foi utilizado a estrutura de Enumerables apesar de ja possuirem 4 Estados, o que facilitaria o controle.
+
+A separacao de classes em arquivos separados para um projeto grande e essencial, mas por ser um teste e 
+possivelmente facilitara na verificacao do que foi implementado ainda encontra-se num arquivo unico
+
+
+Testes
+------------
+
+Os teste automatizados foram realizados com o framework Behave, que e um dos mais utilizados pela comunidade.
+Sua escolha foi feita pela similaridade ao Cucumber, ao qual estou mais familiarizado.
+
+A inclusao de um Mockup para teste facilitaria, mas optei por nao adicionar ao projeto.
+
+
+Exemplo
+------------
+
+O exemplo disponibilizado encontra-se comentado no final do arquivo
+
+
+Linguagem
+------------
+
+Escolhi Python por nao ter oportunidade de desenvolver de utlizar esta liguaguem em projetos ao qual atuei.
+E por ser um desafio (sem duvidas gostaria de acrescentar algo ao meu conhecimento).
+
+Poderia ter escolhido Ruby, que e utilizado no meu atual projeto para automatizacao de testes.
+
