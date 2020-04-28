@@ -1,0 +1,7 @@
+{
+    "python.formatting.provider": "black",
+    "pythonPath": "C:\\Users\\alynne.silva\\python",
+    "python.pythonPath": "C:\\Users\\alynne.silva\\python\\python.exe",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+}
