@@ -1,0 +1,62 @@
+Funcionalidade:
+  Login do usuário no website da Creditas
+  Validar campos obrigatórios
+  Fluxo de esqueci minha senha
+
+
+  Pré-condição: Ter realizado cadastro na plataforma
+
+  Contexto:
+    Dado que eu esteja na página de login
+
+    Cenário: Validar login realizado com sucesso utilizando cpf de usuário
+      Quando eu preencher corretamente o cpf do usuário no campo cpf ou email
+      E eu preencher corretamente a senha do usuário no campo senha
+      E eu clicar no botão entrar
+      Então deverá exibir os dados da solicitação de empréstimo do usuário
+
+    Cenário: Validar login realizado com sucesso utilizando email de usuário
+      Quando eu preencher corretamente o email do usuário no campo cpf ou email
+      E eu preencher corretamente a senha do usuário no campo senha
+      E eu clicar no botão entrar
+      Então deverá exibir os dados da solicitação de empréstimo do usuário
+
+    Cenário: Validar erro no login utilizando cpf incorreto de usuário
+      Quando eu preencher incorretamente o cpf do usuário no campo cpf ou email
+      E eu preencher corretamente a senha do usuário no campo senha
+      E eu clicar no botão entrar
+      Então deverá exibir a mensagem de alerta cpf ou senha inválidos
+
+    Cenário: Validar erro no login utilizando email incorreto de usuário
+      Quando eu preencher incorretamente o email do usuário no campo cpf ou email
+      E eu preencher corretamente a senha do usuário no campo senha
+      E eu clicar no botão entrar
+      Então deverá exibir a mensagem de alerta cpf ou senha inválidos
+
+    Cenário: Validar erro no login utilizando senha incorreta de usuário
+      Quando eu preencher corretamente o cpf do usuário no campo cpf ou email
+      E eu preencher incorretamente a senha do usuário no campo senha
+      E eu clicar no botão entrar
+      Então deverá exibir a mensagem de alerta cpf ou senha inválidos
+
+    Cenário: Validar erro no login utilizando cpf e senha incorretos de usuário
+      Quando eu preencher incorretamente o cpf do usuário no campo cpf ou email
+      E eu preencher incorretamente a senha do usuário no campo senha
+      E eu clicar no botão entrar
+      Então deverá exibir a mensagem de alerta cpf ou senha inválidos
+
+    Cenário: Validar erro no login utilizando email e senha incorretos de usuário
+      Quando eu preencher incorretamente o email do usuário no campo cpf ou email
+      E eu preencher incorretamente a senha do usuário no campo senha
+      E eu clicar no botão entrar
+      Então deverá exibir a mensagem de alerta cpf ou senha inválidos
+
+    Cenário: Validar campos obrigatórios
+      Quando eu clicar no botão entrar sem preencher nenhum campo
+      Então deverá exibir em cima do campo cpf ou email a mensagem preencha esse campo para continuar
+      E então deverá exibir em cima do campo senha a mensagem preencha esse campo para continuar
+
+    Cenário: Validar clique no link esqueceu a senha
+      Quando eu clicar no link esqueceu a senha
+      Então deverá exibir a página de esqueci a senha
+      E um campo para digitar o email e recuparar a senha
