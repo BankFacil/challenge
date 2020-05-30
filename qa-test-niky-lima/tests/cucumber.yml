@@ -1,0 +1,10 @@
+##YAML Template
+---
+
+default: -p environment -p chrome -p json_report
+## default: -p html_report -p chrome -p environment
+html_report: --format progress --format html --out=features_report.html
+json_report: -f Cucumber::Formatter::Json --out=results/cucumber_json/features_report.json
+firefox: BROWSER=firefox
+chrome: BROWSER=chrome
+environment: ENVIRONMENT=environment

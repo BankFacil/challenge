@@ -1,0 +1,13 @@
+source 'https://rubygems.org'
+
+gem 'capybara'
+gem 'chromedriver-helper'
+gem 'cucumber'
+gem 'cucumber-json'
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+gem 'geckodriver-helper'
+gem 'httparty'
+gem 'report_builder'
+gem 'rspec'
+gem 'selenium-webdriver'
+gem 'site_prism', '~> 2.13'

@@ -1,0 +1,495 @@
+[
+  {
+    "uri": "features/specs/001_valida_apresentacao_checkbox.feature",
+    "id": "validação-dos-elementos-dinâmicos-da-página-dynamic-controls",
+    "keyword": "Funcionalidade",
+    "name": "Validação dos elementos dinâmicos da página Dynamic Controls",
+    "description": "  - Eu, como testador, gostaria de validar na página Dynamic Controls\n    o comportamento de seus elementos.\n  - O botão Remove, após o clique, deverá tornar o checkbox da tela invisível,\n    o seu título deverá ser alterado para Add e a frase It's gone! terá que\n    ser apresentada.\n  - Ao clicar *NOVAMENTE*, agora no botão Add, o checkbox deverá ficar visível\n    e a frase a ser apresentada será It's back!",
+    "line": 5,
+    "tags": [
+      {
+        "name": "@funcional",
+        "line": 4
+      }
+    ],
+    "comments": [
+      {
+        "value": "# utf-8",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "id": "validação-dos-elementos-dinâmicos-da-página-dynamic-controls;validar-a-ocultação-do-checkbox-na-página-dynamic-controls;;2",
+        "keyword": "Esquema do Cenário",
+        "name": "Validar a ocultação do checkbox na página Dynamic Controls",
+        "description": "",
+        "line": 22,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@funcional",
+            "line": 4
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-2.18.0/lib/capybara/cucumber.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20680
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.18.0/lib/capybara/cucumber.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20316
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu estou na página Dynamic Controls",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/dynamic_controls_sd.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4291058036
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "eu clico no botão dinâmico",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/dynamic_controls_sd.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 136225597
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o checkbox deverá estar invisível",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/dynamic_controls_sd.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3069126860
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a frase \"It's gone!\" deverá ser apresentada",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/dynamic_controls_sd.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74739475
+            }
+          }
+        ],
+        "after": [
+          {
+            "output": [
+              "O cenário Validar a ocultação do checkbox na página Dynamic Controls, Exemplos (#1) foi finalizado!"
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 130556131
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.18.0/lib/capybara/cucumber.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 937568877
+            }
+          }
+        ]
+      },
+      {
+        "id": "validação-dos-elementos-dinâmicos-da-página-dynamic-controls;validar-a-apresentação-do-checkbox-na-página-dynamic-controls;;2",
+        "keyword": "Esquema do Cenário",
+        "name": "Validar a apresentação do checkbox na página Dynamic Controls",
+        "description": "",
+        "line": 33,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@funcional",
+            "line": 4
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-2.18.0/lib/capybara/cucumber.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36907
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.18.0/lib/capybara/cucumber.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33194
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu estou na página Dynamic Controls",
+            "line": 33,
+            "match": {
+              "location": "features/step_definitions/dynamic_controls_sd.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 297498293
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "eu clico no botão dinâmico",
+            "line": 33,
+            "match": {
+              "location": "features/step_definitions/dynamic_controls_sd.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 96428134
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o checkbox deverá estar invisível",
+            "line": 33,
+            "match": {
+              "location": "features/step_definitions/dynamic_controls_sd.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3004041546
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "eu clico no botão dinâmico",
+            "line": 33,
+            "match": {
+              "location": "features/step_definitions/dynamic_controls_sd.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83672718
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o checkbox deverá estar visível",
+            "line": 33,
+            "match": {
+              "location": "features/step_definitions/dynamic_controls_sd.rb:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3033232826
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a frase \"It's back!\" deverá ser apresentada",
+            "line": 33,
+            "match": {
+              "location": "features/step_definitions/dynamic_controls_sd.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55826063
+            }
+          }
+        ],
+        "after": [
+          {
+            "output": [
+              "O cenário Validar a apresentação do checkbox na página Dynamic Controls, Exemplos (#1) foi finalizado!"
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 102112896
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.18.0/lib/capybara/cucumber.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 641306506
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/specs/002_valida_nova_janela.feature",
+    "id": "abrir-nova-janela-à-partir-de-um-link-de-acesso",
+    "keyword": "Funcionalidade",
+    "name": "Abrir nova janela à partir de um link de acesso",
+    "description": "  - Eu, como testador, desejo abrir uma nova janela / aba\n    à partir de um link disponibilizado na página\n    de origem.\n  - A nova janela / aba deverá apresentar uma url diferente\n    da janela / aba de origem.",
+    "line": 5,
+    "tags": [
+      {
+        "name": "@funcional",
+        "line": 4
+      }
+    ],
+    "comments": [
+      {
+        "value": "# utf-8",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "id": "abrir-nova-janela-à-partir-de-um-link-de-acesso;validar-uma-nova-janela-à-partir-de-um-link;;2",
+        "keyword": "Esquema do Cenário",
+        "name": "Validar uma nova janela à partir de um link",
+        "description": "",
+        "line": 20,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@funcional",
+            "line": 4
+          },
+          {
+            "name": "@smoke",
+            "line": 13
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-2.18.0/lib/capybara/cucumber.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50743
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.18.0/lib/capybara/cucumber.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40919
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu estou na página Windows",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/windows_sd.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 289360462
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "eu clico no link disponibilizado na página",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/windows_sd.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 130440406
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a nova página deverá ser apresentada com o caminho \"/windows/new\"",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/windows_sd.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 552108468
+            }
+          }
+        ],
+        "after": [
+          {
+            "output": [
+              "O cenário Validar uma nova janela à partir de um link, Exemplos (#1) foi finalizado!",
+              "O cenário Validar uma nova janela à partir de um link, Exemplos (#1) foi finalizado!"
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 221087088
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.18.0/lib/capybara/cucumber.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1161883847
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/specs/003_valida_api_posts.feature",
+    "id": "validar-api-de-comentários",
+    "keyword": "Funcionalidade",
+    "name": "Validar api de comentários",
+    "description": "  - Eu, como testador, desejo utilizar uma api\n    de posts e comentários, com a finalidade de\n    verificar seu funcionamento.",
+    "line": 4,
+    "comments": [
+      {
+        "value": "# utf-8",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "id": "validar-api-de-comentários;validar-uma-api-de-comentários",
+        "keyword": "Cenário",
+        "name": "Validar uma api de comentários",
+        "description": "",
+        "line": 11,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@api",
+            "line": 10
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-2.18.0/lib/capybara/cucumber.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26603
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.18.0/lib/capybara/cucumber.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31192
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu acesso a api de comentários",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/posts_api_sd.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35692
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "eu envio o meu comentário",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/posts_api_sd.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1289486153
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o comentário deverá ser postado",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/posts_api_sd.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 451918
+            }
+          }
+        ],
+        "after": [
+          {
+            "output": [
+              "O cenário Validar uma api de comentários foi finalizado!"
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 197947
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.18.0/lib/capybara/cucumber.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40305
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
