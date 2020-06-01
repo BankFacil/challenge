@@ -1,6 +1,11 @@
 import time
 
 
+def send_mail(email, message):
+    print(message)
+    return True
+
+
 class Payment:
     authorization_number = None
     amount = None
@@ -10,14 +15,11 @@ class Payment:
     paid_at = None
 
     def __init__(self, attributes={}):
-        self.authorization_number = attributes.get('attributes', None)
-        self.amount = attributes.get('amount', None)
-        self.invoice = attributes.get('invoice', None)
         self.order = attributes.get('order', None)
         self.payment_method = attributes.get('payment_method', None)
 
     def pay(self, paid_at=time.time()):
-        self.amount = self.order.total_amount
+        self.amount = self.order.total_amount()
         self.authorization_number = int(time.time())
         attributes = dict(
             billing_address=self.order.address,
@@ -29,7 +31,7 @@ class Payment:
         self.order.close(self.paid_at)
 
     def is_paid(self):
-        return self.paid_at != None
+        return self.paid_at is not None
 
 
 class Invoice:
@@ -49,27 +51,59 @@ class Order:
     payment = None
     address = None
     closed_at = None
+    shipping_box = []
+    product_type_functions = None
 
     def __init__(self, customer, attributes={}):
         self.customer = customer
         self.items = []
         self.order_item_class = attributes.get('order_item_class', OrderItem)
         self.address = attributes.get('address', Address(zipcode='45678-979'))
+        self.product_type_functions = {
+            'physical': self.generate_label,
+            'book': self.generate_label,
+            'subscription': self.activate_subscription,
+            'membership': self.activate_membership,
+            'digital': self.digital_purchase
+        }
 
     def add_product(self, product):
         self.items.append(self.order_item_class(order=self, product=product))
 
     def total_amount(self):
         total = 0
-        for item in items:
-            total += item.total
-
+        for item in self.items:
+            total += item.product.value
         return total
 
     def close(self, closed_at=time.time()):
         self.closed_at = closed_at
+        self.ship()
 
-    # remember: you can create new methods inside those classes to help you create a better design
+    def ship(self):
+        for item in self.items:
+            self.product_type_functions[item.product.type](item.product)
+
+    def generate_label(self, item):
+        label = f'Label for {item.name}'
+        if item.type == 'book':
+            label = f'{label}, this item is tax-exempt'
+        self.shipping_box.append(label)
+
+    def activate_subscription(self, item):
+        send_mail(
+            self.customer.email, f'Subscription Activated for {item.name}')
+
+    def activate_membership(self, item):
+        membership = Membership(self.customer, item.name)
+        membership.activate()
+
+    def digital_purchase(self, item):
+        message = (
+            f'Digital purchase for {item.name}, you had alse won this voucher:'
+            f' $10 disccount using this code \"asdasd846\"'
+        )
+        send_mail(self.customer.email, message)
 
 
 class OrderItem:
@@ -81,17 +115,23 @@ class OrderItem:
         self.product = product
 
     def total(self):
-        return 10
+        return self.product.value
+
+    def __str__(self):
+        return self.product.name
 
 
 class Product:
-    # use type to distinguish each kind of product: physical, book, digital, membership, etc.
+    # use type to distinguish each kind of product: physical, book, digital,
+    # membership, etc.
     name = None
     type = None
+    value = None
 
-    def __init__(self, name, type):
+    def __init__(self, name, type, value):
         self.name = name
         self.type = type
+        self.value = value
 
 
 class Address:
@@ -109,28 +149,23 @@ class CreditCard:
 
 
 class Customer:
-    # you can customize this class by yourself
-    pass
+    name = None
+    email = None
+
+    def __init__(self, attributes={}):
+        self.name = attributes.get('name', None)
+        self.email = attributes.get('email', None)
 
 
 class Membership:
-    # you can customize this class by yourself
-    pass
+    customer = None
+    name = None
 
+    def __init__(self, customer, name):
+        self.customer = customer
+        self.name = name
 
-# Book Example (build new payments if you need to properly test it)
-foolano = Customer()
-book = Product(name='Awesome book', type='book')
-book_order = Order(foolano)
-book_order.add_product(book)
-
-attributes = dict(
-    order=book_order,
-    payment_method=CreditCard.fetch_by_hashed('43567890-987654367')
-)
-payment_book = Payment(attributes=attributes)
-payment_book.pay()
-print(payment_book.is_paid())  # < true
-print(payment_book.order.items[0].product.type)
-
-# now, how to deal with shipping rules then?
+    def activate(self):
+        send_mail(
+            self.customer.email,
+            f'This membership, {self.name}, has been activated')
