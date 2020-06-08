@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 80px);
+  padding: 0 10px;
+}
+
+.main__title {
+  color: var(--dove-gray);
+  margin-bottom: 50px;
+  max-width: 600px;
+  line-height: 34px;
+  text-align: center;
+}
