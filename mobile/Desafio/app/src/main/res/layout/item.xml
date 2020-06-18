@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"/>
+
+    <ImageView
+        android:background="@drawable/fundo_texto"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="125dp"
+
+        />
+
+    <TextView
+        android:id="@+id/tvNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:textColor="#FFF"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="125dp"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tvSobrenome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sobrenome"
+        android:textSize="15sp"
+        android:textColor="#FFF"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@id/tvNome"
+        android:layout_marginTop="125dp"/>
+
+</RelativeLayout>
