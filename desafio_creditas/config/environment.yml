@@ -1,0 +1,4 @@
+prd:
+  creditas_check: 'https://the-internet.herokuapp.com/dynamic_controls'
+  creditas_nova_aba: 'https://the-internet.herokuapp.com/windows'
+  creditas_post: 'http://jsonplaceholder.typicode.com'

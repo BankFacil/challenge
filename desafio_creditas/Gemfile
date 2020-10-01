@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+gem 'cucumber'
+gem 'rspec'
+gem 'rake'
+gem 'httparty'
+gem 'json'
+gem 'site_prism'
+gem 'pry-byebug'
+gem 'selenium-webdriver'
+gem "chromedriver-helper"
+gem 'faker'

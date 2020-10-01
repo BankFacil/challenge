@@ -1,0 +1,2 @@
+default: --no-source --color --format pretty
+prd: ENV="prd" debug=true
