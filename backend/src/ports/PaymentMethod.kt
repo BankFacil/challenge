@@ -1,0 +1,3 @@
+package ports
+
+interface PaymentMethod
