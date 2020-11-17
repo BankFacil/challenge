@@ -3,17 +3,18 @@
 A proposta da aplicação que vamos desenvolver em conjunto é disponibilizar a uma pessoa as modalidades de empréstimo as quais ela tem acesso de acordo com algumas variáveis.
 
 Devemos prover os seguintes modelos de empréstimo:
-Empréstimo pessoal. Taxa de juros: 4%
-Empréstimo com garantia com taxa de juros igual a 3%
-Consignado com taxa de juros igual a 2%
+
+- Empréstimo pessoal (`personal_loan`). Taxa de juros: 4%
+- Empréstimo com garantia (`collateral_loan`). Taxa de juros: 3%
+- Empréstimo consignado (`payroll_loan`). Taxa de juros: 2%
 
 Abaixo seguem as regras de negócio relacionadas a concessão de empréstimo de acordo com o perfil da pessoa:
 
-|                          | Empréstimo pessoal | Empréstimo c/ garantia | Consignado |
-| ------------------------ | ------------------ | :--------------------: | ---------- |
-| Salario <= 3000          | Sim                |       Sim\*\*\*        | Não        |
-| Salario > 3000 e < 5000  | Sim                |        Sim\*\*         | Não        |
-| Salário => 5000          | Sim                |         Sim\*          | Sim        |
+|                              | Empréstimo pessoal | Empréstimo c/ garantia | Consignado |
+| ---------------------------- | ------------------ | :--------------------: | ---------- |
+| Salario `<= 3000`            | Sim                |       Sim\*\*\*        | Não        |
+| Salario `> 3000` e `< 5000`  | Sim                |        Sim\*\*         | Não        |
+| Salário `=> 5000`            | Sim                |         Sim\*          | Sim        |
 
 - \* Clientes com menos de 30 anos
 - \*\* Clientes que residem em SP
@@ -73,7 +74,7 @@ Você pode executar o comando a seguir pelo CLI:
 $ ./gradlew test
 ```
 
-Se o teste estiverem falhando, então você teve sucesso. Nada tema!
+Se o teste estiver falhando, então você teve sucesso. Nada tema!
 
 Agora é só codar.
 
