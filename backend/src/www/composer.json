@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "classmap": [
+            "Classes/"
+        ]
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "phpunit/phpunit": "^8"
+    }
+}

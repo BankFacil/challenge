@@ -1,0 +1,8 @@
+php:
+  build: .
+  ports:
+   - "80:80"
+   - "443:443"
+  volumes:
+   - ./www:/var/www/html
+   - /var/www/html/vendor
