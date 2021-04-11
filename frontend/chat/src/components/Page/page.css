@@ -1,0 +1,10 @@
+.wrapper {
+  background-color: #f1f1f1;
+  min-height: 100vh;
+}
+
+@media (min-width: 700px) {
+  .wrapper {
+    padding-top: 50px;
+  }
+}
