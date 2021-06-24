@@ -73,7 +73,7 @@ Você pode executar o comando a seguir pelo CLI:
 $ ./gradlew test
 ```
 
-Se o teste estiverem falhando, então você teve sucesso. Nada tema!
+Se os testes estiverem passando , então tudo está configurado corretamente, já podemos começar!
 
 Agora é só codar.
 
