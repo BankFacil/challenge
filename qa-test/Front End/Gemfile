@@ -1,0 +1,11 @@
+
+source "https://rubygems.org"
+
+ruby '2.4.2'
+
+gem 'cucumber'
+gem 'capybara', '~> 2.18'
+gem 'site_prism'
+gem 'rspec'
+gem 'selenium-webdriver'
+
