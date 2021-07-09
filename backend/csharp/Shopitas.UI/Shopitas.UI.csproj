@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <StartupObject>Shopitas.UI.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shopitas.Domain\Shopitas.Domain.csproj" />
+    <ProjectReference Include="..\Shopitas.Infrastructure\Shopitas.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
